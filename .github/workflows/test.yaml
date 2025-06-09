@@ -22,4 +22,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Say Hello
-        run: echo "Hello from a CodeBuild runner!"
+        run: |
+          echo "Hello from a CodeBuild runner!"
+          env
+          ip a
+          lsb_release -a
+          uname -a
+          free -m
+          curl api.ipify.org
