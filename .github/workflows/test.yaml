@@ -1,4 +1,18 @@
+name: AWS CodeBuild CI
+
+# 2. Define triggers for the workflow.
+# 'push' runs the workflow on pushes to the main branch.
+# 'pull_request' runs it on pull requests targeting the main branch.
+# 'workflow_dispatch' allows you to run it manually from the Actions tab.
 on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
   workflow_dispatch:
 
 jobs:
